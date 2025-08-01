@@ -39,3 +39,9 @@
     padding-right: 3rem !important;
   }
 }
+
+
+/* service  */
+.custom-row-gap {
+  gap: -5rem; /* adjust as needed */
+}
