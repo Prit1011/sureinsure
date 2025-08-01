@@ -1,0 +1,41 @@
+.navbtn{
+  border-top-left-radius: 10px;    
+  border-top-right-radius: 10px;    
+  border-bottom-right-radius: 10px; 
+  border-bottom-left-radius: 0;     
+}
+.aboutimg{
+  height: "50px";
+   width: "100%";
+}
+
+/* about css */
+/* InsuranceComponent.css */
+
+/* Mobile and Tablet (screens < 992px) */
+@media (max-width: 991.98px) {
+  .insurance-image {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .fast-claims-box {
+    top: 1rem !important;
+    right: 1rem !important;
+    max-width: 80%;
+    font-size: 0.8rem;
+    padding-right: 2rem !important;
+  }
+
+  .quote-box {
+    bottom: 1rem !important;
+    right: 1rem !important;
+    max-width: 90% !important;
+    font-size: 0.85rem;
+  }
+
+  .stats-box {
+    margin-top: 1.5rem !important;
+    padding-right: 3rem !important;
+  }
+}
