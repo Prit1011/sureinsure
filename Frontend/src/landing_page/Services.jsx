@@ -76,7 +76,7 @@ const Services = () => {
 
                 <div>
                   <div
-                    className="d-flex align-items-center justify-content-center mx-auto mb-3"
+                    className="d-flex align-items-center justify-content-center mx-2 mb-3"
                     style={{ width: 60, height: 60, backgroundColor: "#009f4d", borderRadius: "50%" }}
                   >
                     {service.icon}
