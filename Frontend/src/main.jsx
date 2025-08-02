@@ -6,14 +6,16 @@ import './index.css';
 import Navbar from './landing_page/Navbar';
 import Hero from './landing_page/Hero';
 import About from './landing_page/About';
-import Footer from './landing_page/Footer';
 import Services from './landing_page/Services';
+import Why_us from './landing_page/Why_us';
+import Footer from './landing_page/Footer';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
    <Navbar />
    <Hero />
    <About />
    <Services />
+   <Why_us />
    <Footer />
   </StrictMode>,
 )
