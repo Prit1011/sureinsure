@@ -112,7 +112,7 @@ export default function InsuranceComponent() {
               className="position-relative ms-sm-auto navbtn stats-box" 
               style={{
                 marginTop: "-10rem",
-                backgroundColor: "rgba(194, 202, 194, 0.37)",
+                backgroundColor: "rgba(201, 206, 201, 0.34)",
                 paddingTop: "1.6rem",
                 paddingBottom: "2.1rem",
                 paddingLeft: "2rem",
