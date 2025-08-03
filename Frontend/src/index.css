@@ -156,5 +156,91 @@
 
 }
 
+/* footer */
+/* Responsive Footer - Mobile & Tablet Fixes */
+@media (max-width: 991.98px) {
+  footer .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  footer .col-2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem !important;
+  }
+
+  footer h2 {
+    font-size: 2rem !important;
+    text-align: center;
+  }
+
+  footer p {
+    font-size: 0.85rem !important;
+    line-height: 1.6 !important;
+    color: #cfdedf !important;
+    margin-top: 0.5rem;
+    padding: 0 0.5rem;
+    word-break: break-word;
+  }
+
+  footer h6 {
+    font-size: 1rem !important;
+    margin-top: 1rem;
+  }
+
+  footer .px-5 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  footer .px-5 div {
+    font-size: 0.85rem !important;
+    line-height: 1.8 !important;
+  }
+
+  footer hr {
+    width: 90% !important;
+    margin: 1rem auto !important;
+  }
+
+  footer .py-4 {
+    padding: 1rem 1rem !important;
+    font-size: 0.75rem !important;
+    text-align: center !important;
+  }
+
+  footer .text-start {
+    text-align: center !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  footer h2 {
+    font-size: 1.6rem !important;
+  }
+
+  footer p {
+    font-size: 0.75rem !important;
+  }
+
+  footer .px-5 div {
+    font-size: 0.78rem !important;
+  }
+
+  footer .py-4 {
+    font-size: 0.68rem !important;
+    padding: 1rem 0.5rem !important;
+  }
+}
+
+
 
 

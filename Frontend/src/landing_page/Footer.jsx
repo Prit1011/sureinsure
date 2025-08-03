@@ -4,13 +4,11 @@ function Footer() {
   return (
     <footer
       style={{ backgroundColor: "#004b49", minHeight: "110px" }}
-      className="text-light overflow-hidden "
+      className="text-light overflow-hidden"
     >
-        <div>
-      <div className=" text-center">
-        <div className="row">
-          <div className="col-2"></div>
-          <div className="col-2  my-4 text-start ml-0 w-4">
+      <div className="container-fluid px-4 py-4">
+        <div className="row justify-content-center">
+          <div className="col-12 col-lg-2 my-4 text-center text-lg-start">
             <h2 className="fw-bold mb-3" style={{ fontSize: "2.8rem" }}>
               Sure<span style={{ color: "#028150ff" }}>Insure</span>
             </h2>
@@ -20,6 +18,7 @@ function Footer() {
                 color: "#cfdedf",
                 lineHeight: "1.6",
               }}
+              className="px-2 px-lg-0"
             >
               Whether it's health, life, car, home, or business insurance, we’re
               here to ensure you feel confident about your future. With a
@@ -29,30 +28,20 @@ function Footer() {
             </p>
           </div>
 
-          <div className="col-2 text-start my-5">
-            <h6
-              className="fw-semibold mb-4 text-start px-5"
-              style={{ fontSize: "1rem", color: "#ffffff" }}
-            >
+          <div className="col-12 col-sm-6 col-lg-2 my-4 text-start text-lg-start">
+            <h6 className="fw-semibold text-start mx-4 mb-3" style={{ fontSize: "1rem" }}>
               Quick Links
             </h6>
             <div className="text-start px-5" style={{ lineHeight: "2" }}>
               <div style={{ fontSize: "0.9rem", color: "#cfdedf" }}>Home</div>
-              <div style={{ fontSize: "0.9rem", color: "#cfdedf" }}>
-                About Us
-              </div>
-              <div style={{ fontSize: "0.9rem", color: "#cfdedf" }}>
-                Services
-              </div>
+              <div style={{ fontSize: "0.9rem", color: "#cfdedf" }}>About Us</div>
+              <div style={{ fontSize: "0.9rem", color: "#cfdedf" }}>Services</div>
             </div>
           </div>
 
-          <div className="col-2 text-start  my-5">
-            <h6
-              className="fw-semibold mb-4 px-5"
-              style={{ fontSize: "1rem", color: "#ffffff" }}
-            >
-              Usefull Links
+          <div className="col-12 col-sm-6 col-lg-2 my-4 text-center text-lg-start">
+            <h6 className="fw-semibold text-start mx-5 mb-3" style={{ fontSize: "1rem" }}>
+              Useful Links
             </h6>
             <div className="text-start px-5" style={{ lineHeight: "2" }}>
               <div style={{ fontSize: "0.9rem", color: "#cfdedf" }}>
@@ -64,11 +53,8 @@ function Footer() {
             </div>
           </div>
 
-          <div className="col-2 text-start my-5">
-            <h6
-              className="fw-semibold mb-4 px-5"
-              style={{ fontSize: "1rem", color: "#ffffff" }}
-            >
+          <div className="col-12 col-sm-6 col-lg-2 my-4 text-center text-lg-start">
+            <h6 className="fw-semibold text-start mx-5 mb-3" style={{ fontSize: "1rem" }}>
               Our Services
             </h6>
             <div className="text-start px-5" style={{ lineHeight: "2" }}>
@@ -85,19 +71,19 @@ function Footer() {
                 Car Insurance
               </div>
             </div>
-          </div>   
-      </div>
-      <div className="col-2"></div>
-          <hr
-            style={{ borderColor: "#babebeff", width: "66%", margin: "0 auto" }}
-            className="my-0 mt-0"
-          />
-          <div
-            className="text-start py-4" 
-            style={{ color: "#cfdedf", fontSize: "0.78rem", paddingLeft:"16rem" }}
-          >
-            Copyright © 2025 SureInsure. All Rights Reserved.
           </div>
+        </div>
+
+        <hr
+          style={{ borderColor: "#babebeff", width: "66%", margin: "0 auto" }}
+          className="my-2"
+        />
+
+        <div
+          className="text-start py-4"
+          style={{ color: "#cfdedf", fontSize: "0.78rem", paddingLeft:"16rem" }}
+        >
+          Copyright © 2025 SureInsure. All Rights Reserved.
         </div>
       </div>
     </footer>
