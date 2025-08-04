@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <footer
-      style={{ backgroundColor: "#004b49", minHeight: "110px" }}
+      style={{ backgroundColor: "#004f4b", minHeight: "110px" }}
       className="text-light overflow-hidden"
     >
       <div className="container-fluid px-4 py-4">

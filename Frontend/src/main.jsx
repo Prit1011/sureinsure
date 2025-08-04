@@ -8,6 +8,8 @@ import Hero from './landing_page/Hero';
 import About from './landing_page/About';
 import Services from './landing_page/Services';
 import Why_us from './landing_page/Why_us';
+import Feature from './landing_page/Feature';
+import Final from './landing_page/Final';
 import Footer from './landing_page/Footer';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -16,6 +18,8 @@ createRoot(document.getElementById('root')).render(
    <About />
    <Services />
    <Why_us />
+   <Feature />
+   <Final />  
    <Footer />
   </StrictMode>,
 )
