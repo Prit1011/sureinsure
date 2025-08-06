@@ -37,16 +37,16 @@ function Hero() {
             <div
                 className="hero-text"
                 style={{
-                    paddingTop: "5rem",
+                    paddingTop: "3rem",
                     position: "relative",
                     zIndex: 2,
                     maxWidth: "60vw",
                     paddingLeft: "16rem",
                 }}
             >
-                <h1 style={{ fontSize: "42px", lineHeight: "1.3", marginBottom: "20px", letterSpacing: "1px" }}>
+                <h1 style={{ fontSize: "44px", lineHeight: "1.3", marginBottom: "20px", letterSpacing: "1px" }}>
                     Complete Insurance<br />
-                    <strong style={{ fontWeight: 800 }}>Coverage for Every Life</strong><br />
+                    <strong style={{ fontWeight: 750 }}>Coverage for Every Life</strong><br />
                     Stage
                 </h1>
 
@@ -94,13 +94,13 @@ function Hero() {
                 @media (max-width: 991.98px) {
                     section {
                         background-image: none !important;
-                        height: auto !important;
+                        height: 50rem !important;
                         flex-direction: column;
                         padding: 2rem 1rem;
                     }
                     .hero-text {
                         padding-left: 1rem !important;
-                        padding-top: 3rem !important;
+                        padding-top: 8rem !important;
                         max-width: 90vw !important;
                     }
                     .hero-text h1 {

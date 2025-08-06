@@ -69,11 +69,12 @@
   .service-icon {
     width: 50px !important;
     height: 50px !important;
-    margin: 0.5rem 1rem !important;
+    
   }
 
   .service-title {
     font-size: 0.95rem !important;
+    padding-top: 1rem;
   }
 
   .service-text {
@@ -82,6 +83,9 @@
 
   .service-link {
     font-size: 0.9rem !important;
+  }
+  .service-hr {
+    margin-top: -5rem;
   }
 }
 

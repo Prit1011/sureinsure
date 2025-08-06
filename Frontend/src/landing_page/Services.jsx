@@ -70,7 +70,7 @@ const Services = () => {
           </p>
         </div>
 
-        <Row className="gx-0 gy-1 align-items mt-5 mx-0 position-relative p-0">
+        {/* <Row className="gx-0 gy-1 align-items mt-5 mx-0 position-relative p-0">
           {services.map((service, index) => (
             <Col xs={12} sm={6} md={4} lg={3} key={index} className="d-flex justify-content-center">
               <Card
@@ -129,7 +129,74 @@ const Services = () => {
               </Card>
             </Col>
           ))}
-        </Row>
+        </Row> */}
+        <div className="row">
+          <div className="col-1"></div>
+            {services.map((service, index) => (
+              <Card
+                className="border-0 shadow-sm  text-start d-flex flex-column service-card "
+                style={{
+                  minHeight: "320px",
+                  maxWidth: "250px",
+                  padding: "0.6rem",
+                  zIndex: 3,
+                  position: "relative",
+                  margin:"2rem 0.8rem",
+                   borderTopLeftRadius: "25px",
+                borderTopRightRadius: "25px",
+                borderBottomRightRadius: "25px",
+                borderBottomLeftRadius: "0",
+                }}
+              >
+                <div>
+                  <div
+                    className="d-flex align-items-center justify-content-center mx-3 mb-3 mt-4 service-icon"
+                    style={{
+                      width: 60,
+                      height: 60,
+                      backgroundColor: "#009f4d",
+                      borderRadius: "80%",
+                    }}
+                  >
+                    {service.icon}
+                  </div>
+                  <Card.Body className="d-flex flex-column " >
+                    <Card.Title
+                      className="fw-bold service-title " 
+                      style={{ fontSize: "1rem", color: "rgba(3, 87, 3, 1)" }}
+                    >
+                      {service.title}
+                    </Card.Title>
+                    <Card.Text
+                      className="text-start service-text"
+                      style={{
+                        fontSize: "0.9rem",
+                        color: "#6c757d",
+                        minHeight: "60px",
+                      }}
+                    >
+                      {service.description}
+                    </Card.Text>
+                  </Card.Body>
+                </div>
+                <div>
+                  <hr className="mx-3 service-hr" style={{ color: "grey" }} />
+                  <div className="pb-2">
+                    <a
+                      href="#"
+                      className="fw-bold mx-3 my-1 text-success text-decoration-none d-inline-flex align-items-center service-link"
+                      style={{ fontSize: "0.95rem" }}
+                    >
+                      Learn More <FiArrowUpRight className="ms-1 fw-bold " style={{fontSize:"1.1rem"}} />
+                    </a>
+                  </div>
+                </div>
+              </Card>
+          ))}
+          <div className="col-3">
+          </div>
+
+        </div>
       </Container>
     </section>
   );

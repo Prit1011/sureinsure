@@ -218,14 +218,14 @@ const StepCard = ({ id, icon, title, desc, offset, badgeTop }) => {
           .step-card {
             max-width: 100%;
             min-height: auto;
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
             padding-left: 20px;
             padding-top: 28px;
           }
           .step-badge,
           .step-badge-top {
             position: relative;
-            top: auto !important;
+            top: 3rem !important;
             bottom: auto !important;
             left: auto !important;
             transform: none !important;
