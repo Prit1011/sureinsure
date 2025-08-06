@@ -29,7 +29,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section
+    <section className="services-section"
       style={{
         backgroundColor: "#ecf1f2",
         padding: "4rem 1rem",
@@ -54,7 +54,7 @@ const Services = () => {
       ></div>
 
       <Container style={{ position: "relative", zIndex: 2 }}>
-        <div className="text-center mb-4">
+        <div className="text-center mb-4 service-main">
           <p
             className="text-success fw-medium mb-1"
             style={{ letterSpacing: "2px", fontSize: "0.75rem" }}

@@ -290,7 +290,7 @@ export default function InsuranceSteps() {
           A Simple Process to <strong>Get Covered</strong> with Ease
         </h2>
         
-        <p className="text-center text-secondary mb-4 mb-lg-5 pt-1 mx-auto" style={{
+        <p className="text-center text-secondary mb-5 mb-lg-5 pt-1 mx-auto" style={{
             maxWidth: "620px",
             fontSize: "0.80rem",
             lineHeight: 1.5,
