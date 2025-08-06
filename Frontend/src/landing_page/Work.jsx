@@ -12,7 +12,7 @@ const steps = [
     id: "01",
     icon: <FaRulerHorizontal size={24} />,
     title: "Tailored Solutions",
-    desc: "Our specialists design a custom  insurance plan that fits your lifestyle and goals.",
+    desc: "Our specialists design a custom insurance plan that fits your lifestyle and goals.",
     offset: false,
     badgeTop: false,
   },
@@ -43,17 +43,7 @@ const steps = [
 ];
 
 function Arrow({ type }) {
-  /**
-   * We have 3 arrows and each placed differently:
-   * - first arrow: bottom of 1st card pointing up to 2nd card top-left area
-   * - second arrow: top of 2nd card pointing right to 3rd card top-left area
-   * - third arrow: bottom of 3rd card pointing up to 4th card top-left area
-   *
-   * We can adjust SVG path, position and rotate accordingly.
-   */
-  // Base arrow path reused, but for vertical arrows (1st and 3rd), rotated.
   if (type === "vertical-up") {
-    // Curved arrow going upward inside narrow width and height.
     return (
       <svg
         width="48"
@@ -87,7 +77,6 @@ function Arrow({ type }) {
       </svg>
     );
   }
-  // Horizontal arrow - used for second arrow
   return (
     <svg
       width="90"
@@ -128,11 +117,11 @@ const StepCard = ({ id, icon, title, desc, offset, badgeTop }) => {
         offset ? "offset-card" : ""
       }`}
     >
-      <div className="icon-title d-flex align-items-center mb-3">
-        <div className="icon-container text-success">{icon}</div>
-        <h5 className="fw-bold step-title mb-0">{title}</h5>
+      <div className="icon-title mb-3 d-flex flex-column justify-content-start align-items-start text-start">
+        <div className="icon-container mb-2">{icon}</div>
+        <h5 className="fw-medium pt-1 step-title mb-0" style={{fontSize:"1rem", color: "#084f3cff"}}>{title}</h5>
       </div>
-      <p className="step-desc">{desc}</p>
+      <p className="step-desc" style={{fontSize:"0.8rem"}}>{desc}</p>
 
       {badgeTop ? (
         <div className="step-badge-top bg-success text-white rounded-pill d-flex align-items-center justify-content-center shadow-lg">
@@ -147,13 +136,16 @@ const StepCard = ({ id, icon, title, desc, offset, badgeTop }) => {
       <style jsx>{`
         .step-card {
           position: relative;
-          min-height: 180px;
-          max-width: 280px;
-          padding-left: 24px;
-          padding-top: 32px;
+          min-height: 220px;
+          max-width: 230px;
+          padding: 3rem 1rem 1rem 1.5rem!important;
           box-sizing: border-box;
           background-color: #ffffff;
           color: #0b3b2e;
+          border-top-left-radius: 25px !important;
+          border-top-right-radius: 25px !important;
+          border-bottom-right-radius: 25px !important;
+          border-bottom-left-radius: 0 !important;
         }
         .offset-card {
           margin-top: 56px;
@@ -213,6 +205,12 @@ const StepCard = ({ id, icon, title, desc, offset, badgeTop }) => {
           box-shadow: 0 4px 8px rgba(19, 130, 86, 0.35);
         }
 
+        @media (max-width: 1199.98px) {
+          .step-card {
+            min-height: 240px;
+          }
+        }
+
         @media (max-width: 991.98px) {
           .offset-card {
             margin-top: 40px;
@@ -242,10 +240,21 @@ const StepCard = ({ id, icon, title, desc, offset, badgeTop }) => {
             padding-right: 0;
           }
         }
+        
+        @media (max-width: 767.98px) {
+          .step-card {
+            padding: 1.5rem !important;
+            margin-bottom: 2rem;
+          }
+          .offset-card {
+            margin-top: 0;
+          }
+        }
+        
         @media (max-width: 575.98px) {
           .step-card {
-            padding-left: 16px;
-            padding-top: 20px;
+            padding: 1.25rem !important;
+            margin-bottom: 1.5rem;
           }
           .icon-container {
             font-size: 22px;
@@ -265,95 +274,81 @@ const StepCard = ({ id, icon, title, desc, offset, badgeTop }) => {
 
 export default function InsuranceSteps() {
   return (
-    <div className=" pt-5 pb-2 position-relative" style={{paddingLeft:"10rem", paddingRight:"10rem", backgroundColor:"#ebefef", height:"78  0px"}}>
-      <Container>
-        <div
-          className="text-center "
-          style={{
-            paddingTop:"3rem",
+    <div className="position-relative" style={{backgroundColor:"#ebefef", paddingBottom: "180px"}}>
+      <Container fluid className="px-lg-5">
+        <div className="text-center  " style={{
             fontSize: "0.75rem",
             color: "#2fab7a",
             fontWeight: "600",
             letterSpacing: "1px",
-          }}
-        >
-          <span className="me-2 " style={{ fontSize: "0.6rem" }}>
-           <h2  style={{fontSize:"0.7rem", letterSpacing:"0.1rem"}} > ●   HOW IT WORK</h2>
-          </span>
+            paddingTop:"6.5rem"
+          }}>
+          <h2 style={{fontSize:"0.7rem", letterSpacing:"0.1rem"}}>● HOW IT WORK</h2>
         </div>
-        <h2
-          className="text-center pt-0 mb-5"
-          style={{ color: "#0b3b2e", fontWeight: 400, fontSize: "2rem" }}
-        >
+        
+        <h2 className="text-center pt-0 mb-4 mb-lg-5" style={{ color: "#0b3b2e", fontWeight: 400, fontSize: "2rem" }}>
           A Simple Process to <strong>Get Covered</strong> with Ease
         </h2>
-        <p
-          className="text-center text-secondary mb-5 pt-1"
-          style={{
+        
+        <p className="text-center text-secondary mb-4 mb-lg-5 pt-1 mx-auto" style={{
             maxWidth: "620px",
-            margin: "0 auto",
             fontSize: "0.80rem",
             lineHeight: 1.5,
-          }}
-        >
+            padding: "0 15px"
+          }}>
           Our insurance services are designed to give you peace of mind—tailored
-          to your needs and <br /> delivered in just a few easy steps.
+          to your needs and delivered in just a few easy steps.
         </p>
 
         {/* Steps row */}
-      <Row
-      className="justify-content-center align-items-start position-relative steps-row"
-      style={{ padding: "0 5.5rem" }} // ✅ Fixed padding
-    >
-      {steps.map(({ id, icon, title, desc, offset, badgeTop }, idx) => (
-        <Col
-          key={id}
-          xs={10}
-          md={3}
-          className={`d-flex justify-content-center position-relative ${
-            offset ? "offset-col" : ""
-          }`}
-        >
-          <StepCard
-            id={id}
-            icon={icon}
-            title={title}
-            desc={desc}
-            offset={offset}
-            badgeTop={badgeTop}
-          />
+        <Row className="justify-content-center align-items-start position-relative steps-row g-0">
+          {steps.map(({ id, icon, title, desc, offset, badgeTop }, idx) => (
+            <Col
+              key={id}
+              xs={12}
+              md={6}
+              lg={3}
+              className={`d-flex justify-content-center position-relative ${
+                offset ? "offset-col" : ""
+              }`}
+            >
+              <StepCard
+                id={id}
+                icon={icon}
+                title={title}
+                desc={desc}
+                offset={offset}
+                badgeTop={badgeTop}
+              />
 
-          {/* Arrows */}
-          {idx === 0 && (
-            <div className="arrow-container arrow-1 d-none d-md-block">
-              <Arrow type="horizontal-up" />
-            </div>
-          )}
-          {idx === 1 && (
-            <div className="arrow-container arrow-2 d-none d-md-block">
-              <Arrow type="horizontal" />
-            </div>
-          )}
-          {idx === 2 && (
-            <div className="arrow-container arrow-3 d-none d-md-block">
-              <Arrow type="horizontal-up" />
-            </div>
-          )}
-        </Col>
-      ))}
-    </Row>
+              {/* Arrows - hidden on mobile */}
+              {idx === 0 && (
+                <div className="arrow-container arrow-1 d-none d-lg-block">
+                  <Arrow type="horizontal-up" />
+                </div>
+              )}
+              {idx === 1 && (
+                <div className="arrow-container arrow-2 d-none d-lg-block">
+                  <Arrow type="horizontal" />
+                </div>
+              )}
+              {idx === 2 && (
+                <div className="arrow-container arrow-3 d-none d-lg-block">
+                  <Arrow type="horizontal-up" />
+                </div>
+              )}
+            </Col>
+          ))}
+        </Row>
       </Container>
 
       <style jsx>{`
-        .bg-light {
-          background-color: #e9f0ef;
-           max-height: 1000px; 
-        }
         .steps-row {
-          max-width: 1300px;
+          max-width: 1070px;
           margin-left: auto;
           margin-right: auto;
           position: relative;
+          padding: 0 1.5rem;
         }
         .offset-col {
           margin-top: 56px;
@@ -367,26 +362,39 @@ export default function InsuranceSteps() {
         .arrow-1 {
           width: 90px;
           height: 40px;
-          bottom: -100px; /* place outside below card */
-            left: calc(50% + 140px);
-          transform: translateX(-50%);
+          bottom: -80px;
+          left: calc(20% + 140px);
+          transform: translateX(-50%) scaleY(-1) rotate(-15deg);
         }
         /* Second arrow: top of second card, horizontal arrow */
         .arrow-2 {
           width: 90px;
           height: 40px;
           top: -30px;
-          left: calc(50% + 80px); /* approx between 2nd and 3rd card */
-          transform: translateX(-30%);
+          left: calc(40% + 80px);
+          transform: translateX(-30%) rotate(-10deg);
         }
         /* Third arrow: bottom of third card, vertical-up arrow */
         .arrow-3 {
-             width: 90px;
+          width: 60px;
           height: 40px;
-          bottom: -100px; /* place outside below card */
-            left: calc(50% + 140px);
-          transform: translateX(-50%);
+          bottom: -75px;
+          left: calc(15% + 140px);
+          transform: translateX(-50%) scaleY(-1) rotate(-15deg);
         }
+        
+        @media (max-width: 1199.98px) {
+          .arrow-1 {
+            left: calc(20% + 120px);
+          }
+          .arrow-2 {
+            left: calc(40% + 60px);
+          }
+          .arrow-3 {
+            left: calc(15% + 120px);
+          }
+        }
+        
         @media (max-width: 991.98px) {
           .offset-col {
             margin-top: 40px !important;
@@ -395,9 +403,16 @@ export default function InsuranceSteps() {
             display: none !important;
           }
         }
+        
+        @media (max-width: 767.98px) {
+          .offset-col {
+            margin-top: 0 !important;
+          }
+        }
       `}</style>
-      <div
-        style={{
+      
+      {/* Bottom white curve */}
+      <div style={{
           position: "absolute",
           bottom: 0,
           left: 0,
@@ -407,8 +422,7 @@ export default function InsuranceSteps() {
           borderTopLeftRadius: "100% 100px",
           borderTopRightRadius: "100% 100px",
           zIndex: 0,
-        }}
-      ></div>
+        }}></div>
     </div>
   );
 }
